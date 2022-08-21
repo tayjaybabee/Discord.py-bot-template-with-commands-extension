@@ -65,8 +65,7 @@ class DevCommands(commands.Cog, name='Developer Commands'):
 		'''
 		Returns a list of all enabled commands.
 		'''
-		base_string = "```css\n"  # Gives some styling to the list (on pc side)
-		base_string += "\n".join([str(cog) for cog in self.bot.extensions])
+		base_string = "```css\n" + "\n".join([str(cog) for cog in self.bot.extensions])
 		base_string += "\n```"
 		await ctx.send(base_string)
 
